@@ -6,7 +6,7 @@
 /*   By: dyunta <dyunta@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 20:20:10 by dyunta            #+#    #+#             */
-/*   Updated: 2023/02/19 18:14:15 by dyunta           ###   ########.fr       */
+/*   Updated: 2024/08/05 14:19:05 by dyunta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <fcntl.h>
-
-typedef struct s_list
-{
-	char			*content;
-	struct s_list	*next;
-}	t_list;
+# include "../libft/libft.h"
 
 char	*get_next_line(int fd);
 size_t	list_len_check_nl(t_list *node, int check);

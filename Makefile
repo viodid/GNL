@@ -2,16 +2,19 @@ BINARY=gnl.a
 LIB=ar rcs
 CODEDIRS=./
 
+CC=gcc
+CFLAGS=-Wall -Wextra -Werror -fPIE
 
 CFILES=$(shell find $(CODEDIRS) -name '*.c')
-OBJECTS = $(CFILES:.c=.o)
+OBJECTS=$(CFILES:.c=.o)
 
 all: $(BINARY)
 
-# https://stackoverflow.com/questions/3220277/what-do-the-makefile-symbols-and-mean
 $(BINARY): $(OBJECTS)
-	$(LIB) -o $@ $^
+	$(LIB) $@ $^
 
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
 	rm -f $(OBJECTS)
