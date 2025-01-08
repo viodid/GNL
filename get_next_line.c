@@ -9,7 +9,7 @@
 /*   Updated: 2024/08/05 14:20:32 by dyunta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "get_next_line.h"
+#include "include/get_next_line.h"
 
 static t_list	*get_buffer_create_list(t_list *header, int fd);
 static char		*get_line_output(t_list *node);

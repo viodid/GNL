@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "include/get_next_line.h"
 
 /* Return the length of the list, or the length of the list
  * until the first \n character is found*/
